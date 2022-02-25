@@ -5,8 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FirstNameProjectWPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="450" Width="500" FontSize="24">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions >
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" >
+            <TextBlock>Save To File Location:</TextBlock>
+            <TextBox>C:\FirstNameList.txt</TextBox>
+            <ListView MinHeight="200"></ListView>
+            <TextBlock>Enter First Name Here: </TextBlock>
+            <TextBox>Alfred</TextBox>
+            <Button> Add Name To List </Button>
+        </StackPanel>
+
+        <Button Grid.Column="0" Grid.Row="1" Margin="0,10,20,0">Delete Name</Button>
+        <Button Grid.Column="1" Grid.Row="1" Margin="20,10,0,0">Delete Name</Button>
 
     </Grid>
 </Window>
