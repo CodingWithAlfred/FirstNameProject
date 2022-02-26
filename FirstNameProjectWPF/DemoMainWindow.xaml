@@ -25,7 +25,7 @@
         </StackPanel>
 
         <Button Grid.Column="0" Grid.Row="1" Margin="0,10,20,0">Delete Name</Button>
-        <Button Grid.Column="1" Grid.Row="1" Margin="20,10,0,0">Delete Name</Button>
+        <Button Grid.Column="1" Grid.Row="1" Margin="20,10,0,0">Save To File</Button>
 
     </Grid>
 </Window>

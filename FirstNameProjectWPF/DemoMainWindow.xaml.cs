@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FirstNameProjectWPF.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,14 @@ namespace FirstNameProjectWPF
     /// </summary>
     public partial class DemoMainWindow : Window
     {
+        SaveDataModel saveDataModel = new SaveDataModel();
         public DemoMainWindow()
         {
             InitializeComponent();
+
+            TxtUCSaveToFileLocation.txtLimitedInput.Text = saveDataModel.FullPath;
+            TxtUCEnteredName.txtLimitedInput.Text = "Alfred";
+
         }
     }
 }
