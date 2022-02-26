@@ -1,6 +1,7 @@
 ﻿using FirstNameProjectWPF.Model;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,6 +22,7 @@ namespace FirstNameProjectWPF
     public partial class DemoMainWindow : Window
     {
         SaveDataModel saveDataModel = new SaveDataModel();
+        ObservableCollection<NamesModel> firstNameModels = new ObservableCollection<NamesModel>();
         public DemoMainWindow()
         {
             InitializeComponent();
@@ -28,6 +30,19 @@ namespace FirstNameProjectWPF
             TxtUCSaveToFileLocation.txtLimitedInput.Text = saveDataModel.FullPath;
             TxtUCEnteredName.txtLimitedInput.Text = "Alfred";
 
+            firstNameModels.Add(new NamesModel() { FirstName = "Fred" });
+            firstNameModels.Add(new NamesModel() { FirstName = "John" });
+            firstNameModels.Add(new NamesModel() { FirstName = "Jack" });
+            firstNameModels.Add(new NamesModel() { FirstName = "Ada" });
+
+            LstBxNames.DisplayMemberPath = "FirstName";
+            LstBxNames.ItemsSource = firstNameModels;
+
+        }
+
+        private void BtnAddName_Click(object sender, RoutedEventArgs e)
+        {
+            firstNameModels.Add(new NamesModel() { FirstName = TxtUCEnteredName.txtLimitedInput.Text });
         }
     }
 }

@@ -13,15 +13,15 @@
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
         <StackPanel Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" >
             <local:UCLabelTextBxInput x:Name="TxtUCSaveToFileLocation" Title="Save To File Location:" MaxLength="50" ></local:UCLabelTextBxInput>
-            <ListView MinHeight="200"></ListView>
+            <ListBox MinHeight="200" MaxHeight="200" x:Name="LstBxNames"></ListBox>
             <local:UCLabelTextBxInput x:Name="TxtUCEnteredName" Title="Enter First Name Here:" MaxLength="15" ></local:UCLabelTextBxInput>
 
-            <Button>Add Name To List</Button>
+            <Button x:Name="BtnAddName" Click="BtnAddName_Click">Add Name To List</Button>
         </StackPanel>
 
         <Button Grid.Column="0" Grid.Row="1" Margin="0,10,20,0">Delete Name</Button>
