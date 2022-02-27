@@ -44,5 +44,13 @@ namespace FirstNameProjectWPF
         {
             firstNameModels.Add(new NamesModel() { FirstName = TxtUCEnteredName.txtLimitedInput.Text });
         }
+
+        private void BtnDeleteName_Click(object sender, RoutedEventArgs e)
+        {
+            if (LstBxNames.SelectedItem !=null)
+            {
+                firstNameModels.Remove(LstBxNames.SelectedItem as NamesModel);
+            }
+        }
     }
 }

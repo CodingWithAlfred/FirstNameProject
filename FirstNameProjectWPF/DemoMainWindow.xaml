@@ -24,7 +24,7 @@
             <Button x:Name="BtnAddName" Click="BtnAddName_Click">Add Name To List</Button>
         </StackPanel>
 
-        <Button Grid.Column="0" Grid.Row="1" Margin="0,10,20,0">Delete Name</Button>
+        <Button Grid.Column="0" Grid.Row="1" Margin="0,10,20,0" Name="BtnDeleteName" Click="BtnDeleteName_Click">Delete Name</Button>
         <Button Grid.Column="1" Grid.Row="1" Margin="20,10,0,0">Save To File</Button>
 
     </Grid>
