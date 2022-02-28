@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -51,6 +52,31 @@ namespace FirstNameProjectWPF
             {
                 firstNameModels.Remove(LstBxNames.SelectedItem as NamesModel);
             }
+        }
+
+        private void BtnSaveToFile_Click(object sender, RoutedEventArgs e)
+        {
+            saveDataModel.FirstNameData = $"Index, First Names{Environment.NewLine}";
+
+            for (int i = 0; i < firstNameModels.Count; i++)
+            {
+                saveDataModel.FirstNameData += $"{i + 1}, {firstNameModels[i].FirstName} {Environment.NewLine}";
+            }
+
+            File.WriteAllText(saveDataModel.FullPath, saveDataModel.FirstNameData);
+            MessageBox.Show($"File saved at{Environment.NewLine} {saveDataModel.FullPath}");
+        }     
+
+        private void CMchangeName_Click(object sender, RoutedEventArgs e)
+        {
+            if (LstBxNames.SelectedItem != null)
+            {
+                (LstBxNames.SelectedItem as NamesModel).FirstName = TxtUCEnteredName.txtLimitedInput.Text;
+
+
+            }
+
+          var s =    firstNameModels;
         }
     }
 }

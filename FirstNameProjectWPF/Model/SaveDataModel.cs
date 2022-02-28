@@ -8,7 +8,7 @@ namespace FirstNameProjectWPF.Model
 {
     public  class SaveDataModel
     {
-        public string FullPath { get; set; } = @"C:\First Name List.txt";
+        public string FullPath { get; set; } = @"C:\Users\udaha\Desktop\First Name.txt";
 
         public string FirstNameData { get; set; }
     }
