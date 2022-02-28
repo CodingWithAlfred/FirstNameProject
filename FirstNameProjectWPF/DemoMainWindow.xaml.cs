@@ -63,6 +63,7 @@ namespace FirstNameProjectWPF
                 saveDataModel.FirstNameData += $"{i + 1}, {firstNameModels[i].FirstName} {Environment.NewLine}";
             }
 
+            saveDataModel.FullPath = TxtUCSaveToFileLocation.txtLimitedInput.Text;
             File.WriteAllText(saveDataModel.FullPath, saveDataModel.FirstNameData);
             MessageBox.Show($"File saved at{Environment.NewLine} {saveDataModel.FullPath}");
         }     
@@ -73,10 +74,7 @@ namespace FirstNameProjectWPF
             {
                 (LstBxNames.SelectedItem as NamesModel).FirstName = TxtUCEnteredName.txtLimitedInput.Text;
 
-
             }
-
-          var s =    firstNameModels;
         }
     }
 }

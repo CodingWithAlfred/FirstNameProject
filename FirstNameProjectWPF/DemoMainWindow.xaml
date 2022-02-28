@@ -18,6 +18,7 @@
         </Grid.RowDefinitions>
         <StackPanel Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" >
             <local:UCLabelTextBxInput x:Name="TxtUCSaveToFileLocation" Title="Save To File Location:" MaxLength="50" ></local:UCLabelTextBxInput>
+           
             <ListBox MinHeight="200" MaxHeight="200" x:Name="LstBxNames">
                 <ListBox.ContextMenu>
                     <ContextMenu >
